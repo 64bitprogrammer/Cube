@@ -1,0 +1,43 @@
+<head>
+  <meta http-equiv="refresh" content="5; url=//www.hscripts.com">
+</head>
+function check()
+{
+  alert("Ello");
+}
+
+function checkAvailability()
+{
+  alert("HHello");
+  var email = document.getElementById('email').value;
+  if(email == "")
+  {
+    <?php
+      $_SESSION['availaibilityStatus'] = "";
+      $_SESSION['showSign'] = "";
+    ?>
+  }
+  else
+  {
+    jQuery.ajax({
+  	url: "check_availability.php",
+  	data:'email='+$("#email").val(),
+  	type: "POST",
+  	success:function(data){
+  	//	$("#user-availability-status").html(data);
+  	},
+  	error:function (){}
+  	});
+  }
+
+}
+
+if(data == "ok")
+{
+  $("#username").removeClass("red");
+  $("#username").addClass("green");
+}
+else
+{
+
+}
