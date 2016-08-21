@@ -9,7 +9,7 @@
   $insertQuery = "insert into signup ( email, passwd ) values ('$email','$pass') ";
 
   if (mysqli_query($conn, $insertQuery)) {
-      echo "<h1> Registration Successful ! </h1> ";
+      header('Location: ../signup_success.php');
   } else {
       echo "Error: " . $insertQuery . "<br>" . mysqli_error($conn);
   }
