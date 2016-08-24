@@ -22,7 +22,7 @@ if(!isset($_SESSION['login_status']))
       <div class="form-group ">
         <label class="control-label col-sm-2" for="email">Email:</label>
         <div class="col-sm-4">
-          <input type="email" class="form-control" id="email" aria-describedby="inputSuccess3Status">
+          <input type="email" class="form-control" id="email" placeholder="Email Address" aria-describedby="inputSuccess3Status">
         </div>
       </div>
 
@@ -42,7 +42,7 @@ if(!isset($_SESSION['login_status']))
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-primary">Submit</button>
-          <button href="signup.php" class="btn btn-warning">Sign-Up</button>
+          <button href="signup.php" type="button" class="btn btn-warning" onclick="location.href='signup.php';" >Sign-Up</button>
         </div>
       </div>
 
