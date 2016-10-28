@@ -1,16 +1,13 @@
 <?php
 
   $host = "localhost";
-  $user = "root";
+  $usernm = "root";
   $password = "";
   $database = "cube";
 
-  if($conn = mysqli_connect($host,$user,$password))
+  if($conn = mysqli_connect($host,$usernm,$password))
   {
-    if(mysqli_select_db($conn,$database))
-    {
-      // Do something here
-    }
+    mysqli_select_db($conn,$database) or die(" <h2> Database Selection Failed !");
   }
   else
   {

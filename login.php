@@ -3,6 +3,7 @@
 session_start();
 if(!isset($_SESSION['login_status']))
   $_SESSION['login_status']=""
+
 ?>
 <!DOCTYPE html>
 
@@ -17,19 +18,19 @@ if(!isset($_SESSION['login_status']))
 
     <h1> Login </h1>
 
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal" method="POST" action="php/login_script.php" role="form">
 
       <div class="form-group ">
         <label class="control-label col-sm-2" for="email">Email:</label>
         <div class="col-sm-4">
-          <input type="email" class="form-control" id="email" placeholder="Email Address" aria-describedby="inputSuccess3Status">
+          <input type="email" name="username" class="form-control" id="email" placeholder="Email Address" aria-describedby="inputSuccess3Status">
         </div>
       </div>
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="pwd">Password:</label>
         <div class="col-sm-4">
-          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+          <input type="password" class="form-control" name="password" id="pwd" placeholder="Enter password">
         </div>
       </div>
 
@@ -41,8 +42,8 @@ if(!isset($_SESSION['login_status']))
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Submit</button>
           <button href="signup.php" type="button" class="btn btn-warning" onclick="location.href='signup.php';" >Sign-Up</button>
+          <button type="submit" class="btn btn-primary">Login</button>
         </div>
       </div>
 
